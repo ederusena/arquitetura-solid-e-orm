@@ -18,13 +18,17 @@ module.exports = {
         type: Sequelize.STRING,
       },
       pageQuantity: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.INTEGER,
       },
       createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE,
-      },
+				type: Sequelize.DATE,
+				allowNull: false
+			},
+			updatedAt: {
+				type: Sequelize.DATE,
+				allowNull: false
+			},
     });
     return BooksTable;
   },
